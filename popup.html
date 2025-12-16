@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <h1>🎬 YouTube Shunt</h1>
+    
+    <div class="form-group">
+      <label for="service">Service</label>
+      <select id="service">
+        <option value="invidious">Invidious</option>
+        <option value="piped">Piped</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="instance">Instance</label>
+      <select id="instance">
+        <!-- Rempli dynamiquement -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="custom-instance">Instance personnalisée</label>
+      <input type="text" id="custom-instance" placeholder="https://mon-instance.com">
+    </div>
+
+    <button id="save-btn">💾 Sauvegarder</button>
+    
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

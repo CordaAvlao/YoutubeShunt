@@ -1,0 +1,124 @@
+/* Bouton Shunt sur les vignettes */
+.yt-shunt-btn {
+  position: absolute !important;
+  top: 45px !important;
+  left: 8px !important;
+  z-index: 9999 !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  /* TOUJOURS VISIBLE */
+  opacity: 0.9 !important;
+  transform: scale(1) !important;
+
+  /* Gradient Invidious/Piped */
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+.yt-shunt-btn:hover {
+  opacity: 1 !important;
+  transform: scale(1.15) !important;
+  box-shadow: 0 4px 16px rgba(238, 90, 36, 0.7) !important;
+}
+
+.yt-shunt-btn:active {
+  transform: scale(0.95) !important;
+}
+
+.yt-shunt-btn.clicked {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+}
+
+.yt-shunt-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: white !important;
+  pointer-events: none !important;
+}
+
+/* Tooltip */
+.yt-shunt-btn::after {
+  content: 'Ouvrir ailleurs' !important;
+  position: absolute !important;
+  left: 44px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: rgba(0, 0, 0, 0.95) !important;
+  color: white !important;
+  padding: 6px 10px !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+  font-family: 'Roboto', Arial, sans-serif !important;
+  white-space: nowrap !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.yt-shunt-btn:hover::after {
+  opacity: 1 !important;
+}
+
+/* Style plus petit pour les petites vignettes (sidebar) */
+ytd-compact-video-renderer .yt-shunt-btn,
+ytd-playlist-panel-video-renderer .yt-shunt-btn {
+  width: 28px !important;
+  height: 28px !important;
+  top: 4px !important;
+  left: 4px !important;
+}
+
+ytd-compact-video-renderer .yt-shunt-btn svg,
+ytd-playlist-panel-video-renderer .yt-shunt-btn svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Bouton flottant sur page vidéo (par-dessus les overlays anti-adblock) */
+.yt-shunt-floating {
+  position: fixed !important;
+  top: 100px !important;
+  left: 20px !important;
+  z-index: 2147483647 !important;
+  /* Max z-index possible */
+
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+
+  padding: 12px 18px !important;
+  border: none !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.yt-shunt-floating:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 25px rgba(238, 90, 36, 0.6) !important;
+}
+
+.yt-shunt-floating svg {
+  width: 22px !important;
+  height: 22px !important;
+  fill: white !important;
+}
+
+.yt-shunt-floating span {
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  font-family: 'Roboto', Arial, sans-serif !important;
+}
